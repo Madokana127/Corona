@@ -20,58 +20,58 @@
 
 ## 怎么参与
 
-本库用 fork 协作：每个人在自己的副本里创作，改动以 Pull Request 汇总回主仓。
+协作方式：**在主仓开分支 → 提 Pull Request → 合并**。`main` 已开启分支保护——所有变更必须经 PR，禁止直推、强推与删除，对三个人一律适用。
 
 ### 0. 准备
 
 - 只读浏览：什么都不用装，在 GitHub 网页上看即可
 - 想动笔：需要 [Git](https://git-scm.com/) 与 [Obsidian](https://obsidian.md/)（免费）
+- 你的账号已加入本库协作者——直接在主仓操作即可，**不需要 fork**
 
-### 1. Fork
-
-点本页右上角的 **Fork**，得到你自己的副本：`https://github.com/<你的用户名>/Corona`
-
-### 2. 克隆到本地
+### 1. 克隆主仓
 
 ```bash
-git clone https://github.com/<你的用户名>/Corona.git
+git clone https://github.com/Madokana127/Corona.git
 cd Corona
 ```
 
-### 3. 用 Obsidian 打开
+### 2. 用 Obsidian 打开
 
-Obsidian →「打开文件夹作为库」→ 选择刚才克隆的 `Corona` 文件夹。
+Obsidian →「打开文件夹作为库」→ 选择克隆下来的 `Corona` 文件夹。
 
-### 4. 关联主仓（一次即可）
+### 3. 动笔前，切一个自己的分支
 
 ```bash
-git remote add upstream https://github.com/Madokana127/Corona.git
+git checkout main
+git pull
+git checkout -b cyla/环参数     # 分支名随意——写清「谁/做什么」，短一点就好
 ```
 
-### 5. 日常写作
+### 4. 写作与提交
 
-在 Obsidian 里正常写，写完提交：
+在 Obsidian 里正常写，写完提交并推送自己的分支：
 
 ```bash
 git add -A
 git commit -m "改动说明"
-git push
+git push -u origin cyla/环参数
 ```
 
-### 6. 同步大家的更新
+### 5. 提 PR 并合并
+
+在 GitHub 上，从你的分支向 `main` 发起 **Pull Request**，看一遍内容后点 **Merge**。
+（当前设置：不需要他人批准，但必须走 PR——直推 `main` 会被拦下。）
+
+没做过的话，见 [GitHub 官方文档：创建拉取请求](https://docs.github.com/zh/pull-requests/how-tos/create-pull-requests/creating-a-pull-request)。
+
+### 6. 收尾：回到最新状态
 
 ```bash
-git pull upstream main
-git push
+git checkout main
+git pull
 ```
 
-### 7. 把改动交回主仓
-
-在 GitHub 上，从你的 fork 发起 **Pull Request** 到主仓 `main` 分支。
-
-没做过的话，见 [GitHub 官方文档：Fork（分叉）与同步](https://docs.github.com/zh/pull-requests/how-tos/work-with-forks/fork-a-repo)。
-
-> 不想敲命令行：在 Obsidian 中安装社区插件 **Git**（[Vinzent03/obsidian-git](https://github.com/Vinzent03/obsidian-git)），Pull / Push 都能在界面里完成。
+> 不想敲命令行：在 Obsidian 中安装社区插件 **Git**（[Vinzent03/obsidian-git](https://github.com/Vinzent03/obsidian-git)），Commit / Pull / Push 都能在界面里完成；开 PR 与合并仍在 GitHub 网页上。
 
 ## 约定
 
@@ -84,7 +84,7 @@ git push
 
 **不想装环境，只想改一点？**
 
-小改动可以直接在 GitHub 网页上编辑文件并提交。
+小改动可以直接在 GitHub 网页上编辑文件——提交时选「创建新分支并启动拉取请求」即可（直接提交到 `main` 会被保护规则拦下）。
 
 ## 联系
 
