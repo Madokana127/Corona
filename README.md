@@ -2,7 +2,8 @@
 
 一部长篇小说，设定于 2666 年。三人共创。
 
-仓库本体是一个 [Obsidian](https://obsidian.md) 库——全部内容以 Markdown 笔记存放。
+仓库本体是一个 [Obsidian](https://obsidian.md) 库
+全部内容以 Markdown 笔记存放。
 
 ## 当前状态
 
@@ -62,8 +63,6 @@ git push -u origin cyla/环参数
 在 GitHub 上，从你的分支向 `main` 发起 **Pull Request**，看一遍内容后点 **Merge**。
 （当前设置：不需要他人批准，但必须走 PR——直推 `main` 会被拦下。）
 
-没做过的话，见 [GitHub 官方文档：创建拉取请求](https://docs.github.com/zh/pull-requests/how-tos/create-pull-requests/creating-a-pull-request)。
-
 ### 6. 收尾：回到最新状态
 
 ```bash
@@ -78,7 +77,7 @@ git pull
 - 用 Markdown 写，中文文件名没问题
 - `.obsidian/` 是各人的本地配置（界面布局、插件等），不入库——按各自的习惯用即可
 - 提交信息写清楚「改了什么」即可，不讲究格式
-- 移动或重命名文件前先说一声——Obsidian 的 `[[双链]]` 跟着文件名走，改名会让链接断开
+- 移动或重命名文件:Obsidian 的 `[[双链]]` 跟着文件名走，改名会让链接断开
 
 ## 常见问题
 
